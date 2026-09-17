@@ -1,0 +1,10 @@
+﻿namespace Polimorfismo
+{
+    public class Cobra : Animal
+    {
+        public override void EmitirSom()
+        {
+            Console.WriteLine("SSSSSSSSSII!!");
+        }
+    }
+}
