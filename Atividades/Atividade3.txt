@@ -1,0 +1,56 @@
+﻿using System.Text.Json.Serialization;
+
+namespace Polimorfismo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Atividade 1
+
+
+            Geometria quadrado = new Geometria();
+            Geometria retangulo = new Geometria();
+            Geometria circulo = new Geometria();
+
+            double area1 = quadrado.CalcularArea(lado: 10);
+            double area2 = retangulo.CalcularArea(Base: 5, altura: 10);
+            double area3 = circulo.CalcularArea(raio: 3, iscirculo: true);
+
+            Console.WriteLine(area1);
+            Console.WriteLine(area2);
+            Console.WriteLine(area3);
+
+            //Atividade 2
+
+
+            Funcionario funcionario = new Funcionario();
+            Funcionario gerente = new Gerente();
+            Funcionario dev = new Desenvolvedor();
+
+            funcionario.Salario = 4200;
+            funcionario.calcularBonusAnual();
+            gerente.Salario = 40000;
+            gerente.calcularBonusAnual();
+            dev.Salario = 8000;
+            dev.calcularBonusAnual();
+
+            Console.WriteLine($"O salario do funcionário com bonûs é {funcionario.calcularBonusAnual() + funcionario.Salario}");
+            Console.WriteLine($"O salario do gerente com bonûs é {gerente.calcularBonusAnual() + funcionario.Salario}");
+            Console.WriteLine($"O salario do desenvolvedor com bonûs é {dev.calcularBonusAnual() + funcionario.Salario}");
+
+            //Atividade 3
+
+
+            Leao l = new Leao();
+            Macaco m = new Macaco();
+            Cobra c = new Cobra();
+            List<Animal> Animais = new List<Animal> { l, m, c };
+
+            foreach (Animal a in Animais)
+            {
+                a.EmitirSom();
+            }
+        }
+    }
+}

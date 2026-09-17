@@ -1,0 +1,25 @@
+﻿using System.Text.Json.Serialization;
+
+namespace Polimorfismo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Atividade 1
+
+
+            Geometria quadrado = new Geometria();
+            Geometria retangulo = new Geometria();
+            Geometria circulo = new Geometria();
+
+            double area1 = quadrado.CalcularArea(lado: 10);
+            double area2 = retangulo.CalcularArea(Base: 5, altura: 10);
+            double area3 = circulo.CalcularArea(raio: 3, iscirculo: true);
+
+            Console.WriteLine(area1);
+            Console.WriteLine(area2);
+            Console.WriteLine(area3);
+        }
+    }
+}

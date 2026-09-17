@@ -1,0 +1,13 @@
+﻿//Atividade 4
+
+            INotificacao not1 = new NotificacaoEmail();
+            INotificacao not2 = new NotificacaoSMS();
+            INotificacao not3 = new NotificacaoPush();
+            List<INotificacao> lista = new List<INotificacao> { not1, not2, not3 };
+            foreach (INotificacao noti in lista)
+            {
+                noti.Enviar();
+            }
+            NotificacaoEmail sobreNot = new NotificacaoEmail();
+            sobreNot.Enviar();
+            sobreNot.Enviar("lista de pagamento");
